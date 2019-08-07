@@ -44,7 +44,7 @@ public class Player : MonoBehaviour
     }
     #endregion
     #region Custom
-    private void Jump()
+    public void Jump()
     {
         if (isGrounded)
         {
@@ -62,26 +62,26 @@ public class Player : MonoBehaviour
 
         rigid.AddForce(direction * speed);
     }
-	public bool Shoot()
-	{
-		Ray ray = new Ray(transform.position, Vector3.forward);
-		RaycastHit hit;
-		// Cast a ray forward
-		if (Physics.Raycast(ray,out hit))
-		{
-			// If ray hit an item
-			Item item = hit.collider.GetComponent<Item>();
-			if (item)
-			{
-				// Collect it
-				item.Collect();
-				// Ray hit an item!
-				return true;
-			}
-		}
-		// Ray didnt hit anything
-		return false;
-	}
-	#endregion
+    public bool Shoot()
+    {
+        Ray ray = new Ray(transform.position, Vector3.forward);
+        RaycastHit hit;
+        // Cast a ray forward
+        if (Physics.Raycast(ray, out hit))
+        {
+            // If ray hit an item
+            Item item = hit.collider.GetComponent<Item>();
+            if (item)
+            {
+                // Collect it
+                item.Collect();
+                // Ray hit an item!
+                return true;
+            }
+        }
+        // Ray didnt hit anything
+        return false;
+    }
+    #endregion
 }
 

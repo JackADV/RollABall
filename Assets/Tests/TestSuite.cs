@@ -66,6 +66,12 @@ public class TestSuite
         Assert.IsTrue(player.Shoot());
     }
     [UnityTest]
+    public IEnumerator Jumped()
+    {
+        //rigid.AddForce(Vector3.up * jump, ForceMode.Impulse);
+        yield return new WaitForFixedUpdate();
+    }
+    [UnityTest]
     public IEnumerator PlayerMoves()
     {
         player = game.GetComponentInChildren<Player>();
