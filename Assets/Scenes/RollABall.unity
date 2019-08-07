@@ -190,5 +190,10 @@ PrefabInstance:
       propertyPath: hitLayers.m_Bits
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 3550697100819452604, guid: c0f3cb88543a5a74185acfe3176baff0,
+        type: 3}
+      propertyPath: onItemCollected.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0f3cb88543a5a74185acfe3176baff0, type: 3}

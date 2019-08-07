@@ -52,7 +52,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void Move(float inputH, float inputV)
+    public void Move(float inputH, float inputV)
     {
         Vector3 direction = new Vector3(inputH, 0, inputV);
 
@@ -67,7 +67,7 @@ public class Player : MonoBehaviour
 		Ray ray = new Ray(transform.position, Vector3.forward);
 		RaycastHit hit;
 		// Cast a ray forward
-		if (Physics.Raycast(ray, out hit))
+		if (Physics.Raycast(ray,out hit))
 		{
 			// If ray hit an item
 			Item item = hit.collider.GetComponent<Item>();
